@@ -1,0 +1,48 @@
+{
+    "name": "fintech-app",
+    "version": "1.0.0",
+    "private": true,
+    "proxy": "http://localhost:3001",
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@mui/icons-material": "^7.1.0",
+        "@mui/material": "^7.1.0",
+        "axios": "^1.5.0",
+        "cors": "^2.8.5",
+        "cra-template-pwa": "^2.0.0",
+        "date-fns": "^2.30.0",
+        "dotenv": "^16.5.0",
+        "express": "^5.1.0",
+        "mongoose": "^8.15.1",
+        "node-cron": "^4.0.7",
+        "plaid": "^34.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-plaid-link": "^4.0.1",
+        "react-scripts": "5.0.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

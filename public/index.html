@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
+  <!-- Theme & Color -->
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="msapplication-TileColor" content="#2563eb" />
+  
+  <!-- SEO -->
+  <title>Finance Tracker | Manage Your Money Smarter</title>
+  <meta name="description" content="Track expenses, set savings goals, and connect bank accounts securely with our personal finance app" />
+  <meta name="keywords" content="finance, budget, expenses, savings, plaid, banking" />
+  <meta name="author" content="Your Name" />
+  
+  <!-- Preconnect to CDNs -->
+  <link rel="preconnect" href="https://cdn.plaid.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  
+  <!-- Fonts (example using Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Modern CSS Reset (optional) -->
+  <style>
+    :root { font-family: 'Inter', system-ui, sans-serif; }
+    body { margin: 0; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  </style>
+</head>
+<body>
+  <!-- Root Element -->
+  <div id="root"></div>
+  
+  <!-- Plaid SDK (loaded after DOM) -->
+  <script 
+    src="https://cdn.plaid.com/link/v2/stable/link-initialize.js" 
+    async 
+    defer
+    onload="console.log('Plaid SDK loaded')"
+    onerror="console.error('Plaid SDK failed to load')"
+  ></script>
+  
+  <!-- Removed service worker registration to avoid 404 errors -->
+</body>
+</html>
