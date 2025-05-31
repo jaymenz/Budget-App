@@ -1,7 +1,8 @@
+// ExpenseItem.jsx
 import { Card, CardContent, Typography, LinearProgress } from '@mui/material';
 import { addMonths, isSameMonth, parseISO } from 'date-fns';
 
-const ExpenseItem = ({ expense, transactions }) => {
+const ExpenseItem = ({ expense, transactions = [] }) => {
   const { name, amount, startDate, duration } = expense;
 
   const start = parseISO(startDate);

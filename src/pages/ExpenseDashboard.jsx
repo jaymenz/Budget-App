@@ -18,9 +18,7 @@ export default function ExpenseDashboard({ expenses, setExpenses }) {
   const [openForm, setOpenForm] = useState(false);
   const [openBankDialog, setOpenBankDialog] = useState(false);
   const [transactions, setTransactions] = useState([]);
-  const [connectedBank, setConnectedBank] = useState(() => {
-    return localStorage.getItem('connected_bank_name');
-  });
+  const [connectedBank, setConnectedBank] = useState(() => localStorage.getItem('connected_bank_name'));
 
   const handleAddExpense = (newExpense, type) => {
     setExpenses(prev => ({
@@ -48,17 +46,10 @@ export default function ExpenseDashboard({ expenses, setExpenses }) {
       </Tabs>
       
       <Box sx={{ my: 2 }}>
-        <Button 
-          variant="contained" 
-          onClick={() => setOpenForm(true)}
-          sx={{ mr: 2 }}
-        >
+        <Button variant="contained" onClick={() => setOpenForm(true)} sx={{ mr: 2 }}>
           Add Expense
         </Button>
-        <Button 
-          variant="outlined" 
-          onClick={() => setOpenBankDialog(true)}
-        >
+        <Button variant="outlined" onClick={() => setOpenBankDialog(true)}>
           Connect Bank
         </Button>
       </Box>
@@ -77,7 +68,7 @@ export default function ExpenseDashboard({ expenses, setExpenses }) {
         <DialogContent>
           <ExpenseForm 
             type={tabValue}
-            onSubmit={(data) => handleAddExpense({
+            onAddExpense={(data) => handleAddExpense({
               ...data,
               id: Date.now(),
               date: new Date().toISOString().split('T')[0],
@@ -98,7 +89,7 @@ export default function ExpenseDashboard({ expenses, setExpenses }) {
         <DialogContent>
           <BankConnection 
             onTransactionsReceived={(data) => {
-              setTransactions(data); // Save transactions to state
+              setTransactions(data);
               setOpenBankDialog(false);
               const bank = localStorage.getItem('connected_bank_name');
               if (bank) setConnectedBank(bank);
